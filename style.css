@@ -1,0 +1,564 @@
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            color: rgba(0, 0, 0, 0.87);
+            background-color: #fafafa;
+        }
+
+        #body {
+            display: flex;
+            height: calc(100% - 60px)
+        }
+
+        #header {
+            height: 60px;
+            overflow: hidden;
+            display: flex;
+        }
+
+        #drawer-container {
+            width: 300px;
+            background-color: #fafafa;
+            height: 100%;
+            overflow: auto;
+            border-right: 1px solid #ddd
+        }
+
+        #toolbox-container {
+            width: 300px;
+            background-color: #2C313A;
+            height: 100%;
+            overflow: auto;
+            border-right: 1px solid #262323
+        }
+
+        #content-container {
+            flex: 1;
+            height: 100%;
+            overflow: auto;
+        }
+
+        #brand {
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            background-color: #00897B;
+            padding: 10px;
+            width: 300px;
+        }
+
+        #brand a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        #title {
+            flex: 1;
+            font-weight: bold;
+            font-size: 30px;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 10px 10px 55px;
+        }
+        /*#title a {
+            color:rgba(0, 0, 0, 0.87);;
+            text-decoration: none;
+        }*/
+
+        a {
+            color: unset;
+            text-decoration: unset;
+        }
+
+        #mainMenu a.current {
+            background-color: #eee;
+        }
+
+        #mainMenu {
+            display: flex;
+            flex-flow: column;
+        }
+
+        #toolbox {
+            display: flex;
+            flex-flow: column;
+        }
+
+        #toolbox a {
+            display: flex;
+            color: #D1D4DC;
+            text-decoration: none;
+            padding: 20px 10px;
+        }
+
+        #toolbox div div {
+            color: #D1D4DC;
+            padding: 5px 10px;
+            border-top: 1px solid rgba(0, 0, 0, 0.5)
+        }
+
+        #toolbox a span {
+            flex: 1
+        }
+
+        #user a {
+            color: rgba(0, 0, 0, 0.87);
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            padding: 10px;
+            font-size: 12px;
+        }
+
+        #mainMenu a {
+            display: block;
+            color: rgba(0, 0, 0, 0.87);
+            text-decoration: none;
+            padding: 20px 10px;
+        }
+
+        #mainMenu a:hover {
+            background-color: #ddd
+        }
+
+        .content {
+            padding: 10px;
+        }
+
+        .rule {
+            display: flex;
+            min-height: 40px;
+            padding: 20px 0;
+        }
+
+        .rule>span {
+            flex: 1;
+            font-size: 20px;
+        }
+
+        .rule>*, .rule>.switch {
+            margin: auto 20px;
+        }
+
+        .rule i {
+            font-size: 30px;
+        }
+
+        .actionBar {
+            display: flex;
+            padding: 20px 20px 0px 0px;
+            justify-content: flex-end;
+        }
+
+        .actionBar .spacer {
+            flex: 1
+        }
+
+        .button {
+            color: white;
+            padding: 5px 10px;
+            background-color: #00897B;
+            border-radius: 4px;
+            text-decoration: none;
+            margin: auto 0px auto 10px;
+            border: none;
+            font-size: 12px;
+        }
+
+        .actionBar form {
+            display: inline-block;
+            margin: auto 0;
+            flex: 1;
+            min-width: 350px;
+        }
+
+        .buttonBar {
+            display: flex;
+        }
+
+        .buttonBar a {
+            flex: 1;
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.86);
+            border: 1px solid #aaa;
+            padding: 5px 10px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .buttonBar a:first-child {
+            border-radius: 5px 0 0 5px
+        }
+
+        .buttonBar a:last-child {
+            border-radius: 0 5px 5px 0
+        }
+
+        .buttonBar a.current {
+            background-color: #00897B;
+            border: 1px solid #00897B;
+            color: white;
+        }
+
+        .smallbuttonBar {
+            display: flex;
+        }
+
+        .smallbuttonBar a {
+            color: rgba(0, 0, 0, 0.86);
+            border: 1px solid #aaa;
+            padding: 5px 10px;
+            text-decoration: none;
+            margin: auto 0px auto 0px;
+            font-size: 12px;
+        }
+
+        .smallbuttonBar a:first-child {
+            border-radius: 5px 0 0 5px;
+            margin: auto 0px auto 10px;
+        }
+
+        .smallbuttonBar a:last-child {
+            border-radius: 0 5px 5px 0
+        }
+
+        .smallbuttonBar a.current {
+            background-color: #00897B;
+            border: 1px solid #00897B;
+            color: white;
+        }
+
+        .building-block {
+            padding: 10px 0px 10px 10px;
+            border: 5px solid #282C34;
+            border-right: 0px solid #282C34;
+            margin: auto;
+            color: white;
+            border-radius: 10px 0 0 10px;
+        }
+
+        .building-block span {
+            padding: 10px;
+        }
+        
+        .fab {
+            background-color: #00897B;
+            color: white;
+            position: absolute;
+            bottom: 60px;
+            right: 60px;
+            display: flex;
+            width: 70px;
+            height: 70px;
+            border-radius: 40px;
+            font-size: 20px;
+            text-decoration: none;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+        }
+
+        .fab i {
+            margin: auto;
+        }
+
+        .toast {
+            display: flex;
+            position: absolute;
+            background-color: #555;
+            color: white;
+            padding: 10px;
+            bottom: 20px;
+            width: 1300px;
+            margin: 30px;
+            border-radius: 3px;
+            z-index: 6;
+        }
+
+        .toast span {
+            flex: 1;
+            margin: auto;
+        }
+
+        .toast a {
+            padding: 5px 10px;
+            border: 1px solid #777;
+            border-radius: 3px;
+            color: white;
+            margin: auto;
+            text-decoration: none;
+        }
+
+        div:not(.popup) table {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: large;
+            border-collapse: collapse;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        input, select {
+            width: 100%
+        }
+
+        div:not(.popup) th, :not(.popup) td {
+            padding: 15px;
+        }
+
+        .calender th {
+            text-align: center;
+        }
+
+        h2 {
+            margin: 10px 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        div:not(.popup) tr:nth-child(even) {
+            background-color: #eee
+        }
+
+        div:not(.popup) th {
+            text-align: left;
+            background-color: #eee;
+        }
+
+        .shade {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 9999998;
+        }
+
+        .popup {
+            position: absolute;
+            top: 100px;
+            left: calc(50% - 250px);
+            width: 500px;
+            padding: 10px 50px 30px;
+            border-radius: 10px;
+            background-color: white;
+            z-index: 9999999;
+        }
+
+        #menuShowHide, #menuShowHideSmall {
+            position: absolute;
+            left: -9999px;
+        }
+
+        @media (min-width: 601px) {
+            #menuShowHideSmall+label {
+                display: none;
+            }
+            #menuShowHide+label {
+                position: absolute;
+                font-weight: bold;
+                font-size: 30px;
+                top: 16px;
+                left: 315px;
+                cursor: pointer
+            }
+            #menuShowHide:checked+label {
+                left: 15px;
+                color: white
+            }
+            #menuShowHide:checked~#body #drawer-container, #menuShowHide:checked~#header #brand {
+                display: none;
+            }
+            #menuShowHide:checked~#header #title {
+                background-color: #00897B;
+                color: white;
+                border-bottom: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            #menuShowHide+label {
+                display: none;
+            }
+            #menuShowHideSmall+label {
+                position: absolute;
+                font-weight: bold;
+                font-size: 30px;
+                top: 16px;
+                left: 15px;
+                cursor: pointer;
+                color: white
+            }
+            #drawer-container, #brand {
+                display: none;
+            }
+            #menuShowHideSmall:checked~#body #drawer-container {
+                display: block;
+                position: absolute;
+                top: 61px;
+                height: calc(100% - 61px);
+                z-index: 9999;
+            }
+            #menuShowHideSmall:checked~#body #content-container:before {
+                display: block;
+                position: absolute;
+                content: "";
+                top: 61px;
+                height: calc(100% - 61px);
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.7);
+                z-index: 9998;
+            }
+            #header #title {
+                background-color: #00897B;
+                color: white;
+                border-bottom: none;
+            }
+        }
+        /*--------BEGINNING OF STYLESHEET--------*/
+        /*----- Switch -----*/
+
+        .switch {
+            margin: 0.25em;
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            width: 64px;
+            height: 24px;
+            padding: 3px;
+            background-color: transparent;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        .switch-input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        .switch-input:focus~.switch-handle {
+            box-shadow: 0 0 4px 1px #469DF6, 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+        }
+
+        .switch-group {
+            display: inline-block;
+            width: 100%;
+        }
+        /* No Label */
+
+        .switch.no-label {
+            width: 40px;
+        }
+
+        .switch.no-label>.switch-input:checked~.switch-handle {
+            left: 20px;
+        }
+
+        .switch.no-label>.switch-trough {
+            font-size: 0;
+        }
+        /*----- Switch Trough -----*/
+
+        .switch-trough {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            position: relative;
+            display: block;
+            height: inherit;
+            font-size: 11px;
+            text-transform: uppercase;
+            background: #eceeef;
+            border-radius: inherit;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+            -webkit-transition: 0.15s ease-out;
+            -moz-transition: 0.15s ease-out;
+            -o-transition: 0.15s ease-out;
+            transition: 0.15s ease-out;
+            -webkit-transition-property: opacity background;
+            -moz-transition-property: opacity background;
+            -o-transition-property: opacity background;
+            transition-property: opacity background;
+        }
+
+        .switch-trough:before, .switch-trough:after {
+            position: absolute;
+            top: 50%;
+            margin-top: -0.5em;
+            line-height: 1;
+            -webkit-transition: inherit;
+            -moz-transition: inherit;
+            -o-transition: inherit;
+            transition: inherit;
+        }
+
+        .switch-trough:before {
+            content: attr(data-off);
+            right: 11px;
+            color: #aaa;
+            text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+        }
+
+        .switch-trough:after {
+            content: attr(data-on);
+            left: 11px;
+            color: white;
+            text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+        }
+        /*----- Switch Handle -----*/
+
+        .switch-handle {
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 22px;
+            height: 22px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+            -webkit-transition: left 0.15s ease-out;
+            -moz-transition: left 0.15s ease-out;
+            -o-transition: left 0.15s ease-out;
+            transition: left 0.15s ease-out;
+        }
+
+        .switch-handle:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -6px 0 0 -6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 6px;
+        }
+        /*----- Checked Switch -----*/
+
+        .switch-input:checked~.switch-trough {
+            background: #419BF9;
+        }
+
+        .switch-input:checked~.switch-trough:before {
+            opacity: 0;
+        }
+
+        .switch-input:checked~.switch-trough:after {
+            opacity: 1;
+        }
+
+        .switch-input:checked~.switch-handle {
+            left: 44px;
+        }

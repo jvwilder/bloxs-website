@@ -1,0 +1,135 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <title>
+      Bloxs
+    </title>
+
+    <!--<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js'></script>-->
+    <script type="text/javascript">
+
+    </script>
+</head>
+
+<body>
+    <input type="checkbox" id="menuShowHide">
+    <label for="menuShowHide"><i class="fa fa-bars" aria-hidden="true"></i></label>
+
+    <input type="checkbox" id="menuShowHideSmall">
+    <label for="menuShowHideSmall"><i class="fa fa-bars" aria-hidden="true"></i></label>
+    <div id="header">
+        <div id="brand">
+            <a href="index.html"><i class="fa fa-puzzle-piece" aria-hidden="true"></i> Bloxs</a>
+        </div>
+        <div id="title">
+            <a href="scripts.html">Scripts</a> ⟩ Edit script
+        </div>
+
+    </div>
+
+    <div id="body">
+
+
+
+
+        <div id="drawer-container">
+            <div id="drawer">
+
+                <div id="user">
+                    <a href="#"><i class="fa fa-user" aria-hidden="true"></i> Robin De Pril <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                </div>
+                <div id="mainMenu">
+                    <a href="index.html"><i class="fa fa-tachometer" aria-hidden="true"></i> Overview</a>
+                    <a href="scripts.html" class="current"><i class="fa fa-th-large" aria-hidden="true"></i> Scripts</a>
+                    <a href="planning.html"><i class="fa fa-calendar" aria-hidden="true"></i> Planning</a>
+                    <a href="users.html"><i class="fa fa-users" aria-hidden="true"></i> People</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="content-container">
+            <div class="actionbar">
+                <div class="smallbuttonbar">
+                    <a href="scriptsEditor.html" class="current">
+                        <span><i class="fa fa-puzzle-piece"></i> Visual</span>
+                    </a>
+                    <a href="scriptsEditorTextual.html">
+                        <span><i class="fa fa-code"></i> Textual</span>
+                    </a>
+                </div>
+                <div class="spacer"></div>
+                <a href="newSchedule.html" class="button">
+                    <span><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</span>
+                </a>
+
+            </div>
+            <div id="content-container" style="display:flex; margin:10px; height:calc(100% - 70px)">
+
+
+
+                <div id="toolbox-container">
+                    <div id="toolbox">
+
+
+                        <a href="#" style="background-color: #1954BC;"><span>People</span><i class="fa fa-caret-right" aria-hidden="true"></i>
+</a>
+                        <a href="#" style="background-color:#0c7b0c;"><span>Moments</span><i class="fa fa-caret-down" aria-hidden="true"></i>
+</a>
+                        <div id="left" style="background-color: #044d04;">
+                            <div>
+                                From
+                                <input value="Date" style="display:inline-block; width: 50px"> to
+                                <input value="Date" style="display:inline-block; width: 50px">
+                            </div>
+                            <div>
+                                From
+                                <input value="Time" style="display:inline-block; width: 50px"> to <input value="Time" style="display:inline-block; width: 50px">
+                            </div>
+                            <div>
+                                At weekends
+                            </div>
+                            <div>
+                                For each weekday
+                            </div>
+                        </div>
+                        <a href="#" style="background-color:#838300"><span>Recources</span><i class="fa fa-caret-right" aria-hidden="true"></i>
+</a>
+                        <a href="#" style="background-color:#890000"><span>Logic</span><i class="fa fa-caret-right" aria-hidden="true"></i>
+</a>
+
+                    </div>
+                </div>
+
+                <div id="content-container" style="background-color:#282C34">
+
+                    <div id="content">
+
+                        <div id="right" class="content" style="display:flex; height: 100%">
+
+                            <div class="building-block" style="background-color: #044d04;" style>
+                                <span>For each weekday</span>
+                                <div class="building-block" style="background-color: #1954BC;" style>
+                                    <span>Pick 4 people from group A</span>
+                                    <div class="building-block" style="background-color: #890000;" style>
+                                        <span>Do shift 143</span>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
